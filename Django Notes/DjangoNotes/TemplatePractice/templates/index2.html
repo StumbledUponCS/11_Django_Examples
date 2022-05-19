@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> 1) </h1>
+    
+<p>In Django templates, you can render variables by putting them inside brackets:</p>
+
+
+<h1>Hello {{ firstname }}, how are you?</h1>
+
+<p>In views.py you can see how to create the variable.</p>
+<p>In template.html you can see how to use the variable.</p>
+
+<p></p>
+
+<p>The variable firstname in the example above was sent to the template via a view:</p>
+
+<br>
+<br>
+<hr>
+
+<h1> 1.1) </h1>
+<pre>
+    Filter a Value:
+    
+    
+    With the pipe | character followed by a filter name, you can run a value through a filter before returning it.
+
+    The name of the filter defines what the filter will do with the value.
+</pre>
+<p></p>
+<p></p>
+
+<h1>Hello {{ firstname|upper }}, how are you?</h1>
+
+<p>In template.html you can see how to filter a variable.</p>
+<p>In views.py you can see the original value of the variable.</p>
+
+
+<br>
+<br>
+<hr>
+
+
+<h1> 1.2) </h1>
+
+<pre>
+
+    The filter Tag:
+    
+    
+    The filter tag allows you to run a whole section of code through a filter, and return it according to the filter keyword(s).
+
+    
+    
+    Example:
+    
+    Return the variable firstname with upper case letters:
+
+</pre>
+<p></p>
+<p></p>
+
+{% filter upper %}
+  <h1>Hello everyone, {{ firstname }}, how are you?</h1>
+{% endfilter %}
+
+<br>
+<br>
+<hr>
+
+<h1> 1.3) </h1>
+
+<pre>
+    To add multiple filters, separate the keywords with the pipe | character:
+
+    Example:
+    
+    
+    Separate filters with the pipe character:
+
+</pre>
+<p></p>
+
+{% filter upper|linenumbers %}Hello!
+my name is
+Emil.
+What is your name?{% endfilter %}
+
+
+<br>
+<br>
+<hr>
+
+<p></p>
+<p></p>
+
+
+<br>
+<br>
+<hr>
+
+
+<h1> 2) </h1>
+
+
+<p>Data From a Model</p>
+
+<p>To get data from the Memebers model, we will have to import it in the views file, and extract data from it in the view:</p>
+
+<ul>
+  {% for x in mymembers %}
+    <li>{{ x.fname }}</li>
+  {% endfor %}
+</ul>
+  
+  
+<p>We use the Django template tag % to loop through the members.</p>
+  
+  
+<br>
+<br>
+<hr>
+
+
+<h1>  3)  </h1>
+
+<p>Template Tags</p>
+
+
+<pre>if and for, are called "template tags" in Django.
+
+To execute template tags, we surrond them in %} brackets.
+
+</pre>
+
+
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% else %}
+  <h1>Bye</h1>
+{% endif %}
+
+<p>The template tags allows us to to do some programming on the server before sending HTML to the client.</p>
+
+<br>
+<br>
+<hr>
+
+
+<h1>  4)  </h1>
+
+
+<p>If Statement</p>
+
+<p>An if statement evaluates a variable and executes a block of code if the value is true.</p>
+
+
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %} 
+
+<pre>Elif:
+The elif keyword says "if the previous conditions were not true, then try this condition".
+</pre>
+
+
+<br>
+<br>
+<hr>
+
+<p></p>
+
+
+<h1>  5)  </h1>
+
+{% if greeting >= 1 %}
+  <h1>Hello</h1>
+{% endif %} 
+
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  6)  </h1>
+
+
+<pre>and:
+    
+To check if more than one condition is true.
+
+</pre>
+
+
+{% if greeting == 4 and day == "Friday" %}
+  <h1>Hello Weekend!</h1>
+{% endif %}
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  7)  </h1>
+
+
+
+<pre>or:
+
+To check if one of the conditions is true.
+</pre>
+
+
+{% if greeting == 1 or greeting == 4 %}
+  <h1>Hello</h1>
+{% endif %} 
+
+<br>
+<br>
+<hr>
+
+<br>
+<br>
+<hr>
+
+
+<h1>  8)  </h1>
+
+
+<pre>in:
+
+To check if a certain item is present in an object.
+</pre>
+
+
+
+{% if 'Banana' in fruits %}
+  <h1>Hello</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %} 
+
+<br>
+<br>
+<hr>
+
+
+<h1>  9)  </h1>
+
+
+<pre>not in:
+
+To check if a certain item is not present in an object.
+
+</pre>
+
+
+
+{% if 'Banana' not in fruits %}
+  <h1>Hello</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %} 
+
+<br>
+<br>
+<hr>
+
+
+<h1>  10)  </h1>
+
+
+
+<p></p>
+
+
+<ul>
+  {% for x in mymembers %}
+    <li>{{ x.fname }}</li>
+  {% endfor %}
+</ul>
+
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  11)  </h1>
+
+
+<p>The two objects have the same value, but is it the same object? </p>
+
+
+{% if x is y %}
+  <h1>YES</h1>
+{% else %}
+  <h1>NO</h1>
+{% endif %}
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  12)  </h1>
+
+
+<p>Let us try the same example with the == operator instead:</p>
+
+
+{% if x == y %}
+  <h1>YES</h1>
+{% else %}
+  <h1>NO</h1>
+{% endif %}
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  13)  </h1>
+
+
+<pre>How can two objects be the same? Well, if you have two objects that points to the same object, then the is operator evaluates to true:
+
+We will demonstrate this by using the  %} tag, which allows us to create variables in the template:
+</pre>
+
+
+{% with var1=x var2=x %}
+  {% if var1 == var2 %}
+    <h1>YES</h1>
+  {% else %}
+    <h1>NO</h1>
+  {% endif %}
+{% endwith %}
+
+
+<br>
+<br>
+<hr>
+
+
+
+
+<h1>  14)  </h1>
+
+
+<pre>is not:
+
+To check if two objects are not the same.
+
+</pre>
+
+
+{% if x is not y %}
+  <h1>YES</h1>
+{% else %}
+  <h1>NO</h1>
+{% endif %} 
+
+
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  15)  </h1>
+
+
+
+<p></p>
+
+
+{% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% endfor %}
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  16)  </h1>
+
+
+<pre>For Loops :
+
+A for loop is used for iterating over a sequence, like looping over items in an array, a list, or a dictionary.
+
+</pre>
+
+
+{% for x in mymembers %}
+  <h1>{{ x.id }}</h1>
+  <p>
+    {{ x.fname }}
+    {{ x.lname }}
+  </p>
+{% endfor %} 
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  17)  </h1>
+
+<pre>Reversed:
+
+The reversed keyword is used when you want to do the loop in reversed order.
+</pre>
+
+
+{% for x in mymembers reversed %}
+  <h1>{{ x.id }}</h1>
+  <p>
+    {{ x.fname }}
+    {{ x.lname }}
+  </p>
+{% endfor %}  
+
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  18)  </h1>
+
+
+<pre>Empty:
+    
+    
+    The empty keyword can be used if you want to do something special if the object is empty.
+
+
+</pre>
+
+
+<ul>
+  {% for x in emptytestobject %}
+    <li>{{ x.fname }}</li>
+  {% empty %}
+    <li>No members</li>
+  {% endfor %}
+</ul> 
+
+<br>
+<br>
+<hr>
+
+
+<h1>  19)  </h1>
+
+<p>The empty keyword can also be used if the object does not exist:</p>
+
+
+<ul>
+  {% for x in myobject %}
+    <li>{{ x.fname }}</li>
+  {% empty %}
+    <li>No members</li>
+  {% endfor %}
+</ul> 
+
+<br>
+<br>
+<hr>
+
+
+<h1>  20)  </h1>
+
+<pre>forloop.counter:
+    
+    The current iteration, starting at 1.
+
+</pre>
+
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.counter }}</li>
+  {% endfor %}
+</ul> 
+
+
+<br>
+<br>
+<hr>
+
+
+
+
+<h1>  21)  </h1>
+
+
+<pre>forloop.counter0:
+    
+    The current iteration, starting at 0.
+</pre>
+
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.counter0 }}</li>
+  {% endfor %}
+</ul> 
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  22)  </h1>
+
+<pre>forloop.revcounter:
+    
+    
+    The current iteration if you start at the end and count backwards, ending up at 1.
+
+</pre>
+
+
+
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.revcounter }}</li>
+  {% endfor %}
+</ul> 
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  23)  </h1>
+
+
+<pre>forloop.revcounter0:
+    
+    
+    The current iteration if you start at the end and count backwards, ending up at 0.
+</pre>
+
+
+<ul>
+  {% for x in fruits %}
+    <li>{{ forloop.revcounter0 }}</li>
+  {% endfor %}
+</ul> 
+
+<br>
+<br>
+<hr>
+
+
+<h1>  24)  </h1>
+
+
+<pre>forloop.first:
+    
+    Allows you to test if the loop is on its first iteration.
+
+    
+    
+    Example:
+    
+    Draw a blue background for the first iteration of the loop:
+</pre>
+
+
+<ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.first %}
+        style='background-color:lightblue;'
+      {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
+
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  25)  </h1>
+
+
+<pre>forloop.last:
+    
+    
+    Allows you to test if the loop is on its last iteration.
+
+    
+    Example:
+    
+    
+    Draw a blue background for the last iteration of the loop:
+
+</pre>
+
+<ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.last %}
+        style='background-color:lightblue;'
+      {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
+
+
+
+<br>
+<br>
+<hr>
+
+
+
+<br>
+<br>
+<hr>
+
+
+
+<h1>  26)  </h1>
+
+<pre>Comments:
+    
+    
+Comments allows you to have sections of code that should be ignored.
+</pre>
+
+
+{% comment %}
+  <h1>Welcome ladies and gentlemen</h1>
+{% endcomment %}
+
+
+<pre>Comment Description:
+    
+    
+You can add a message to your comment, to help you remember why you wrote the comment, or as message to other people reading the code.
+</pre>
+
+{% comment "this was the original welcome message" %}
+    <h1>Welcome ladies and gentlemen</h1>
+{% endcomment %}
+
+
+
+<pre>Smaller Comments:
+    
+    
+    You can also use the {# ... #} tags when commenting out code, which can be easier when for smaller comments:
+</pre>
+
+
+
+
+
+
+<h1>Welcome{# Everyone#}</h1>
+
+
+<pre>Comment in Views:
+    
+    
+Views are written in Python, and Python comments are written with the # character:</pre>
+
+
+<p>In views.py you can see how to import and fetch members from the database.</p>
+
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  27)  </h1>
+
+
+
+<pre>Cycles:
+    
+    The cycle tag allows you to do different tasks for different iterations.
+
+    The cycle tag takes arguments, the first iteration uses the first argument, the second iteration uses the second argument etc.
+
+    {% cycle 'lightblue' 'pink' 'yellow' 'coral' 'grey' %}
+    If you want to have a new background color for each iteration, you can do that with the cycle tag:
+    
+</pre>
+
+
+
+
+<ul>
+  {% for x in mymembers %}
+    <li style='background-color:{% cycle 'lightblue' 'pink' 'yellow' 'coral' 'grey' %}'>
+      {{ x.fname }}
+    </li>
+  {% endfor %}
+</ul> 
+
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  28)  </h1>
+
+<pre></pre>
+<p></p>
+
+<p>If the cycle reaches the end of the arguments, it starts over:</p>
+
+
+<ul>
+  {% for x in mymembers %}
+    <li style='background-color:{% cycle 'lightblue' 'pink' %}'>
+      {{ x.fname }}
+    </li>
+  {% endfor %}
+</ul> 
+
+<br>
+<br>
+<hr>
+
+
+<h1>  29)  </h1>
+
+
+<pre>Cycle Arguments as Variable:
+    
+    In the first example the argument values was displayed directly in the cycle, but you can also keep the argument values in a variable, and use it later:
+
+    Example:
+    
+    
+    Store the color values in a variable named bgcolor, and use it as a background color later in the loop:
+</pre>
+<p></p>
+
+
+
+<ul>
+  {% for x in mymembers %}
+    {% cycle 'lightblue' 'pink' 'yellow' 'coral' 'grey' as bgcolor silent %}
+    <li style='background-color:{{ bgcolor }}'>
+      {{ x.fname }}
+    </li>
+  {% endfor %}
+</ul> 
+
+<p>Did you notice the silent keyword? Make sure you add this, or else the argument values will be displayed twice in the output:</p>
+
+<br>
+<br>
+<hr>
+
+<h1>  30)  </h1>
+
+<pre></pre>
+<p>Did you notice the silent keyword? Make sure you add this, or else the argument values will be displayed twice in the output:</p>
+
+
+<ul>
+  {% for x in mymembers %}
+    {% cycle 'lightblue' 'pink' 'yellow' 'coral' 'grey' as bgcolor %}
+    <li style='background-color:{{ bgcolor }}'>
+      {{ x.fname }}
+    </li>
+  {% endfor %}
+</ul> 
+
+
+
+<br>
+<br>
+<hr>
+
+
+<h1>  31)  </h1>
+
+
+<pre>Reset Cycle:
+    
+    
+    You can force the cycle to restart by using the {% resetcycle %} tag:
+</pre>
+<p></p>
+
+
+<ul>
+  {% for x in mymembers %}
+    {% cycle 'lightblue' 'pink' 'yellow' 'coral' 'grey' as bgcolor silent %}
+    {% if forloop.counter == 3 %}
+      {% resetcycle %}
+    {% endif %}
+    <li style='background-color:{{ bgcolor }}'>
+      {{ x.fname }}
+    </li>
+  {% endfor %}
+</ul> 
+
+
+
+
+
+<br>
+<br>
+<hr>
+
+
+<pre></pre>
+<p></p>
+
+
+
+
+<br>
+<br>
+<hr>
+
+<pre></pre>
+<p></p>
+
+
+
+
+<br>
+<br>
+<hr>
+
+
+
+<pre></pre>
+<p></p>
+<p></p>
+
+
+
+<br>
+<br>
+<hr>
+
+
+<pre></pre>
+<p></p>
+
+
+
+</body>
+</html>  
+
+
+
+
+<pre></pre>
+<p></p>
+<p></p>
+
+
+
+<br>
+<br>
+<hr>
+
+<pre></pre>
+<p></p>
+<p></p>
+
+
+
+<br>
+<br>
+<hr>
+
+<pre></pre>
+<p></p>
+<p></p>
+
+
+
+<br>
+<br>
+<hr>
+
+<pre></pre>
+<p></p>
+<p></p>
+
+
+
+<br>
+<br>
+<hr>
+
+<pre></pre>
+<p></p>
+<p></p>
+
+
+
+<br>
+<br>
+<hr>
+
+<!-- <h1>Hello {{ firstname }}, how are you?</h1> -->

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The queryset object:</p>
+
+{{ members }}
+
+<p>Loop through the items:</p>
+
+<table border='1'>
+  {% for x in members %}
+    <tr>
+      <td>{{ x }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>   
