@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code</title>
+  <link rel="stylesheet" href=".\css\study-notes.css">
+</head>
+
+<body>
+
+
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext"> </div>
+  </div>
+</div>
+
+
+    
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext">VS Code</div>
+  </div>
+</div>
+    
+    
+<ul class="navBar">
+  <li class="navBar"><a href="apis.htm" target="_blank">API's</a></li>
+  <li class="navBar"><a href="Django_general.htm" target="_blank">Django: General</a></li>
+  <li class="navBar"><a href="Django_Images.htm" target="_blank">Django: Images</a></li>
+  <li class="navBar"><a href="Django_Database.htm" target="_blank">Django: Database</a></li>
+  <li class="navBar"><a href="Django_Github.htm" target="_blank">Django: GitHub </a></li>
+  <li class="navBar"><a href="Django_GoDaddy.htm" target="_blank">Django:      GoDaddy</a></li>
+  <li class="navBar"><a href="VSCode.htm" target="_blank">VSCode</a></li>
+</ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h1 style="text-align:center;color: white;" >VS Code</h1>
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="VSCode.htm">&laquo;</a>
+  <a href="VSCode.htm">1</a>
+  <a href="VSCode2.htm" class="active">2</a>
+  <a href="VSCode3.htm">3</a>
+  <a href="VSCode4.htm">4</a>
+  <a href="VSCode3.htm">&raquo;</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<h1 style="text-align:center;color: white;" >VS Code : Creating A Template</h1>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp7.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        <h1 class="two">How it was done on W3</h1>
+        
+        <ol type='I'><b> In Django, you can use templates to segregate HTML code from python code : </b> <br><br><br>
+            <li style="color:green;"><b>strongly advise not to mix HTML code with python code</b></li><br>
+                <ol type="i">
+                  <li style="color:red;">Avoiding HTML in python code will improve the security of your application from cross site scripting attack</li>
+                  <li style="color:red;">increase the code readability</li>
+                </ol>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        
+        <ol type='I'><b> create a template for HTML and add placeholders : </b> <br><br><br>
+            <li style="color:blue;"><b>to capture and render the data sent from the python code during run-time</b></li><br><br>
+            <li style="color:blue;"><b>Open the file dj_web/settings.py</b></li><br><br>
+                <ol type="i">
+                  <li style="color:red;">Find the list called INSTALLED_APPS and add dj_app to it</li>
+                  <li style="color:red;">'dj_app'</li>
+                </ol>
+        </ol>
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates2.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        <ol type='I'><b> templates folder  : </b> <br><br><br>
+            <li style="color:blue;"><b>In the dj_app folder create a sub-folder called templates</b></li><br><br>
+            <li style="color:blue;"><b>Now, create another sub-folder called dj_app under templates folder</b></li><br><br>
+                <ol type="i">
+                  <li style="color:red;">The name of the folder should be the same as the name of the web app</li>
+                </ol>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates3.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        
+        <ol type='I'><b> hello.html  : </b> <br><br><br>
+            <li style="color:blue;"><b>Under the /dj_app/templates/dj_app folder create a file called hello.html</b></li><br><br>
+            <li style="color:blue;"><b>Add content to the hello.html file</b></li><br><br>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates4.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        
+        <ol type='I'><b> hello.html : </b> <br><br><br>
+            <li style="color:blue;"><b>Add this content to the hello.html file</b></li><br><br>
+                <ol type="i">
+                  <li style="color:red;">here the place holders are marked by double opening and double closing curly braces {{ and }}</li>
+                  <li style="color:red;"> There a three placeholders, one for name variable and two for date variable with filter |</li>
+                </ol>
+        </ol>
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates5.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two"> Creating A Template : </h1>
+    <p class="one">
+                
+        
+        <ol type='I'><b> views.py file : </b> <br><br><br>
+            <li style="color:blue;"><b>Open the views.py file</b></li><br><br>
+            <li style="color:blue;"><b>add these import statements along with the existing one</b></li><br><br>
+        </ol>
+        
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates6.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+                
+        <ol type='I'><b> views.py file : </b><br><br><br>
+            <li style="color:blue;"><b>In the same file (views.py), add this function to load the template we just created</b></li><br><br>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates7.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        <ol type='I'><b> views.py file : </b><br><br><br>
+            <li style="color:blue;"><b>After the changes, the content of the views.py file looks like this</b></li><br><br>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates8.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        <h1 class="two">#</h1>
+        
+        <ol type='I'><b> urls.py file : </b> <br><br><br>
+            <li style="color:blue;"><b>Now go to dj_app/urls.py file</b></li><br><br>
+            <li style="color:blue;"><b>add a route entry under urlpatterns list for our new view</b></li><br><br>
+            <li style="color:blue;"><b>The hello view with the HTML template is now created and the URL route is set</b></li><br><br>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <br><br>
+  <div class="img-container_two">
+    <img src=".\images\VSCode_imgs\AddingTemplates9.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Creating A Template : </h1>
+    <p class="one">
+                
+        <ol type='I'><b> Start the web server : </b> <br><br><br>
+            <li style="color:blue;"><b>Start the web server without debug mode by pressing the Control + F5 keys</b></li><br><br>
+            <li style="color:blue;"><b>In the browser, launch the web app and navigate to /hello/name url</b></li><br><br>
+            <li style="color:blue;"><b>Let name be some name</b></li><br><br>
+        </ol>
+        
+        
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="VSCode.htm">&laquo;</a>
+  <a href="VSCode.htm">1</a>
+  <a href="VSCode2.htm" class="active">2</a>
+  <a href="VSCode3.htm">3</a>
+  <a href="VSCode4.htm">4</a>
+  <a href="VSCode3.htm">&raquo;</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+
+</html>

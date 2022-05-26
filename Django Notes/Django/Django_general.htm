@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django</title>
+  <link rel="stylesheet" href=".\css\study-notes.css">
+</head>
+
+<body>
+
+
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext"> </div>
+  </div>
+</div>
+
+
+    
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext">Django</div>
+  </div>
+</div>
+    
+    
+    
+
+<ul class="navBar">
+  <li class="navBar"><a href="apis.htm" target="_blank">API's</a></li>
+  <li class="navBar"><a href="Django_general.htm" target="_blank">Django: General</a></li>
+  <li class="navBar"><a href="Django_Images.htm" target="_blank">Django: Images</a></li>
+  <li class="navBar"><a href="Django_Database.htm" target="_blank">Django: Database</a></li>
+  <li class="navBar"><a href="Django_Github.htm" target="_blank">Django: GitHub </a></li>
+  <li class="navBar"><a href="Django_GoDaddy.htm" target="_blank">Django:      GoDaddy</a></li>
+  <li class="navBar"><a href="VSCode.htm" target="_blank">VSCode</a></li>
+</ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1 style="text-align:center;color: white;" >Django: MTV </h1>
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="Django_general5.htm">&laquo;</a>
+  <a href="Django_general.htm" class="active">1</a>
+  <a href="Django_general2.htm">2</a>
+  <a href="Django_general3.htm">3</a>
+  <a href="Django_general4.htm">4</a>
+  <a href="Django_general5.htm">5</a>
+  <a href="Django_general2.htm">&raquo;</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">DJANGO</h1>
+    <p class="one">
+            
+    
+    <p class="one">Django: follows MVT design pattern (Model View Template).</p>
+    <br>
+    <p class="one">MVT : Model View Template</p>
+    <br>
+    
+    
+    
+    <ol><b> MVT :</b> <br><br>
+    <li><b> Model :</b></li>
+        <ul>
+          <li>The data you want to present</li>
+          <li>Usually data from a database</li>
+        </ul>
+        <br><br><br>
+    <li><b> View :</b></li>
+        <ul>
+          <li>A request handler that returns the relevant template and content</li>
+          <li>Based on the request from the user</li>
+        </ul>
+        <br><br><br>
+    <li><b> Template :</b></li>
+        <ul>
+          <li>A text file (like an HTML file) </li>
+          <li>Contains the layout of the web page, with logic on how to display the data</li>
+        </ul>
+    </ol>
+  </div>
+</div>
+
+
+<hr>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">MVT - Model , View, Template</h1>
+    <p class="one">
+    
+    <ol><b> MVT :</b> <br><br>
+    <li><b> Model :</b></li>
+    <li><b> View :</b></li>
+    <li><b> Template :</b></li>
+    </ol>
+    
+    
+    <p class="one">The model provides data from the database</p>
+    
+
+    <p class="one">Django, with ORM<br>
+    <b>(Object Relational Mapping)<b>
+    <br>
+    makes it easier to communicate with the database,<br>
+    without having to write complex SQL statements.</p>
+  </div>
+</div>
+
+<hr>
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">MVT - Model , View, Template</h1>
+    <p class="one">
+            
+    <h1 class="two">Model</h1>
+    
+    <p class="one">The model provides data from the database</p>
+    
+    <p class="one">The models are usually located in a file called models.py.</p>
+    
+  </div>
+</div>
+
+
+<hr>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">MVT - Model , View, Template</h1>
+    <p class="one">
+            
+    <ol type="I"><b> View :</b> <br><br><br>
+        <li>A view is a function or method that :</li><br>
+            <ol>
+                <li>Takes http requests as arguments</li><br>
+                <li>Imports the relevant model(s)</li><br>
+                <li>Finds out what data to send to the template</li><br>
+                <li>Returns the final result</li><br>
+            </ol>
+    </ol>
+    
+    <p class="one" style="color:red;">Django views are Python functions that takes http requests and returns http response, like HTML documents.</p>
+    
+    
+    <p class="one" style="color:red;">A web page that uses Django is full of views with different tasks and missions.</p>
+    
+    
+    <p class="one" style="color:red;">The views are usually located in a file called views.py.</p>
+    
+  </div>
+</div>
+
+
+<hr>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">MVT - Model , View, Template</h1>
+    <p class="one">
+            
+    <h1 class="two">Template</h1>
+    
+    <p class="one">A template is a file where you describe how the result should be represented.</p>
+    
+    <p class="one" style="color:red;">Django uses standard HTML to describe the layout, but uses Django tags to add logic</p>
+    
+    <p class="one">The templates of an application is located in a folder named templates.</p>
+    
+
+
+
+  </div>
+</div>
+
+<hr>
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">MVT - Model , View, Template</h1>
+    <p class="one">
+            
+    <h1 class="two">URLs</h1>
+    
+    <p class="one">Django also provide a way to navigate around the different pages in a website.</p>
+    
+    <p class="one" style="color:red;">When a user requests a URL, Django decides which view it will send it to.</p>
+    
+    <p class="one" style="color:red;">This is done in a file called urls.py.</p>
+    </div>
+</div>
+
+<hr>
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">MVT - Model , View, Template</h1>
+    <p class="one">
+            
+    <h1 class="two">URLs</h1>
+    
+    <p class="one" style="color:green;">When you have installed Django & created you first Django web application, and <br>the browser requests the URL, this is basically what happens</p>
+   
+   <br>
+   
+    <ol><b> What happens :</b> <br><br><br>
+        <li style="color:green;"><b>  Django receives the URL : </b></li><br>
+            <ol type="I">
+              <li style="color:red;">Checks the urls.py file</li>
+            </ol>
+            <br><br><br>
+        <li style="color:green;"><b>  URL's : </b></li><br>
+            <ol type="I">
+              <li style="color:blue;">Calls the view that matches the URL</li>
+            </ol>
+            <br><br><br>
+        <li style="color:green;"><b> The view :</b></li><br>
+            <ol type="I">
+              <li style="color:red;">Located in views.py</li>
+              <li style="color:blue;">Checks for relevant models</li>
+            </ol>
+            <br><br><br>
+        <li style="color:green;"><b> The models are :</b></li> <br>
+            <ol type="I">
+              <li style="color:red;">Imported from the modals.py file</li>
+            </ol>
+            <br><br><br>
+        <li style="color:green;"><b> The view then :</b></li> <br>
+            <ol type="I">
+              <li style="color:blue;">Sends the data to a specified template in the template folder</li>
+            </ol>
+            <br><br><br>
+        <li style="color:green;"><b>  The template :</b></li> <br>
+            <ol type="I">
+              <li style="color:red;">Specified template in the template folder</li><br>
+              <li style="color:blue;">Contains the layout of the web page,<br> with logic on how to display the data</li><br>
+                <ol type="i">
+                    <li style="color:blue;">Contains HTML and Django tags</li><br>
+                </ol>
+              <li style="color:blue;">With the data it returns finished <br> HTML content back to the browser</li>
+              </ol>
+    </ol>
+
+    <br><br>
+
+    
+    <p class="one">Django can do a lot more than this</p>
+    
+  </div>
+</div>
+
+<hr>
+<br>
+<br>
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="Django_general5.htm">&laquo;</a>
+  <a href="Django_general.htm" class="active">1</a>
+  <a href="Django_general2.htm">2</a>
+  <a href="Django_general3.htm">3</a>
+  <a href="Django_general4.htm">4</a>
+  <a href="Django_general5.htm">5</a>
+  <a href="Django_general2.htm">&raquo;</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+
+
+<hr>
+
+<br><br><br><br><br><br>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+
+</html>

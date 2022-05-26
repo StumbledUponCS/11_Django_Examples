@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django</title>
+  <link rel="stylesheet" href=".\css\study-notes.css">
+</head>
+
+<body>
+
+
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext"> </div>
+  </div>
+</div>
+
+
+    
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext">Django</div>
+  </div>
+</div>
+    
+    
+    
+
+<ul class="navBar">
+  <li class="navBar"><a href="apis.htm" target="_blank">API's</a></li>
+  <li class="navBar"><a href="Django_general.htm" target="_blank">Django: General</a></li>
+  <li class="navBar"><a href="Django_Images.htm" target="_blank">Django: Images</a></li>
+  <li class="navBar"><a href="Django_Database.htm" target="_blank">Django: Database</a></li>
+  <li class="navBar"><a href="Django_Github.htm" target="_blank">Django: GitHub </a></li>
+  <li class="navBar"><a href="Django_GoDaddy.htm" target="_blank">Django:      GoDaddy</a></li>
+  <li class="navBar"><a href="VSCode.htm" target="_blank">VSCode</a></li>
+</ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1 style="text-align:center;color: white;" >Django: Working On A Django Project </h1>
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="Django_general.htm">&laquo;</a>
+  <a href="Django_general.htm">1</a>
+  <a href="Django_general2.htm" class="active">2</a>
+  <a href="Django_general3.htm">3</a>
+  <a href="Django_general4.htm">4</a>
+  <a href="Django_general5.htm">5</a>
+  <a href="Django_general3.htm">&raquo;</a>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Working On A Django Project : </h1>
+    <p class="one">
+    
+    <ol type="I"><b>Create a virtual environment : </b> <br><br>
+    <li><b>Navigate to where you want the project to be located : </b></li><br>
+        <ol type="i">
+          <li style="color:blue;" ><b>python -m venv myproject</b></li>
+        </ol>
+    </ol>
+    <br><br><br>
+  </div>
+</div>
+
+<hr>
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Activaing The Virtual Environment : </h1>
+    <p class="one">
+    
+    <ol> <b> Activate the Virtual Environment EVERY TIME you open the command prompt : </b> <br><br><br>
+        <li><b> Navigate to where your project is located (from root to the directory containing your myproject directory) : </b></li><br>
+            <ol type="i">
+              <li style="color:blue;" ><b>python -m venv myproject</b></li>
+            </ol>
+            <br>
+        <br><br>
+        <li><b> *** Activate your Environment : ***  </b></li><br>
+            <ol type="i">
+              <li style="color:red;" ><b>source myproject/bin/activate</b></li>
+            </ol>
+            <br>
+        <br><br>
+        <li><b> Once the environment is activated, you will see this result in the command prompt : </b></li><br>
+              <ol type="i">
+                <li style="color:blue;" ><b>Unix/MacOS:<br><br>
+                    
+                    (myproject) ... $</b><br><br><br></li>
+              </ol>
+  
+    </ol>
+
+  </div>
+</div>
+
+<hr>
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Version Checks Prior to Starting a Django Project :</h1>
+    <p class="one">
+    
+
+    <ol type="I"> <b> Version Checks :</b> <br><br><br>
+      <li><b>To Check your version of Python : </b></li><br>
+          <ol type="i">
+            <li style="color:blue;" ><b>python --version</b></li>
+          </ol>
+      <br><br><br>
+      <li><b>To Check your version of PIP : </b></li><br>
+          <ol type="i">
+            <li style="color:blue;" ><b>pip --version</b></li>
+          </ol>
+      <br><br><br>
+      <li><b>To Check your version of Django : </b></li><br>
+          <ol type="i">
+            <li style="color:blue;" ><b>django-admin --version</b></li>
+          </ol>
+      <br><br><br>
+    </ol>
+
+    <br>
+    <hr>
+
+  </div>
+</div>
+
+<hr>
+
+
+
+
+
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Working On A Django Project : </h1>
+    <p class="one">
+    
+    <ol type="I"> <b> Initial Guidelines :</b> <br><br><br>
+      <li><b>To Start a New Project : </b></li><br>
+            <ol type="i">
+              <li style="color:blue;" > django-admin startproject <b>InsertProjectName</b></li>
+            </ol>
+      <br><br><br><br>
+      <li><b>To Run the new project and see it on a web browser : </b></li><br>
+          <ol type="i">
+            <li>Naviage into the root folder</li><br>
+            <li style="color:blue;" >python manage.py runserver</li>
+          </ol>
+      <br><br><br>
+      <li><b>To See the Result : </b></li><br>
+          <ol type="i">
+            <li>Open a new browser window</li><br>
+            <li>Type 127.0.0.1:8000 in the address bar.</li>
+          </ol>
+      <li><b>To Create an App : </b></li><br>
+          <ol type="A">
+            <li style="color:blue;" >python manage.py startapp <b>InsertAppName</b></li><br>
+                <ol type="i">
+                  <li>Then update views.py</li><br>
+                  <li>create urls.py</li><br>
+                  <li>create folder templates </li>
+                </ol>
+           </ol>
+      <br><br><br><br>
+   </ol>
+
+  </div>
+</div>
+
+<hr>
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Working On A Django Project : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b> Adding A New App :</b> <br><br><br>
+          <li style="color:green;"><b>To Create an App : </b></li><br>
+              <ol>
+                <li style="color:blue;">python manage.py startapp <b>InsertAppName</b></li><br>
+                    <ol type="i">
+                      <li>Then update views.py</li><br>
+                      <li>Create urls.py</li><br>
+                      <li>Create folder templates </li>
+                    </ol>
+         </ol>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Working On A Django Project : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>  More Guidelines :</b> <br><br><br>
+          <li><b>You can add to views direction for what to do during the app : </b></li>
+              <ol type="a">
+                <li style="color:green;"> Add to urls --> Call views </li>
+              </ol>
+          <br><br><br>
+          <li style="color:blue;"><b>You can add a templates folder and add html docs inside :  </b></li>
+              <ol type="a">
+                <li style="color:green;"> to connect it to the view add to view</li>
+                    <ol type="i">
+                      <li style="color:red;"> Add to view</li>
+                      <li style="color:red;"> Then add that to url patterns so it can call that method in views  </li>
+                    </ol>
+              </ol>
+          <br><br><br>
+       </ol>
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Making Migrations : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b> To make migrations : </b> <br><br><br>
+            <li><b>Happens after changes, for changes to take effect</b></li>
+                <ol type="a">
+                  <li>Such as :</li>
+                      <ol type="i">
+                        <li>Creating models</li>
+                        <li>Adding to models</li>
+                        <li>Updating models</li>
+                      </ol>
+            <br><br>
+            <li style="color:blue;" > python manage.py makemigrations <b>InsertModelName</b></li>
+                <ol type="i">
+                  <li> <b>** done when adding to models</b></li>
+                </ol>
+                <br><br>
+            <li style="color:blue;" > python manage.py migrate</li>
+                <ol type="i">
+                  <li> <b>** done when adding to templates and models</b></li>
+                </ol>
+          <br><br><br>
+       </ol>
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="Django_general.htm">&laquo;</a>
+  <a href="Django_general.htm">1</a>
+  <a href="Django_general2.htm" class="active">2</a>
+  <a href="Django_general3.htm">3</a>
+  <a href="Django_general4.htm">4</a>
+  <a href="Django_general5.htm">5</a>
+  <a href="Django_general3.htm">&raquo;</a>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<hr>
+
+<br><br><br><br><br><br>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django</title>
+  <link rel="stylesheet" href=".\css\study-notes.css">
+</head>
+
+<body>
+
+
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext"> </div>
+  </div>
+</div>
+
+
+    
+<div class="hero-image">
+  <img src=".\images\mtns.png" alt="WelcomeImg" class="Headerimage">
+  <div class="Headeroverlay">
+    <div class="Headertext">Django</div>
+  </div>
+</div>
+    
+    
+    
+
+<ul class="navBar">
+  <li class="navBar"><a href="apis.htm" target="_blank">API's</a></li>
+  <li class="navBar"><a href="Django_general.htm" target="_blank">Django: General</a></li>
+  <li class="navBar"><a href="Django_Images.htm" target="_blank">Django: Images</a></li>
+  <li class="navBar"><a href="Django_Database.htm" target="_blank">Django: Database</a></li>
+  <li class="navBar"><a href="Django_Github.htm" target="_blank">Django: GitHub </a></li>
+  <li class="navBar"><a href="Django_GoDaddy.htm" target="_blank">Django:      GoDaddy</a></li>
+  <li class="navBar"><a href="VSCode.htm" target="_blank">VSCode</a></li>
+</ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1 style="text-align:center;color: white;" >Django: Adding To A Model </h1>
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="Django_general2.htm">&laquo;</a>
+  <a href="Django_general.htm">1</a>
+  <a href="Django_general2.htm">2</a>
+  <a href="Django_general3.htm" class="active">3</a>
+  <a href="Django_general4.htm">4</a>
+  <a href="Django_general5.htm">5</a>
+  <a href="Django_general4.htm">&raquo;</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Working On A Django Project : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b> Adding A New App :</b> <br><br><br>
+          <li style="color:green;"><b>To Create an App : </b></li><br>
+              <ol>
+                <li style="color:blue;">python manage.py startapp <b>InsertAppName</b></li><br>
+                    <ol type="i">
+                      <li>Then update views.py</li><br>
+                      <li>Create urls.py</li><br>
+                      <li>Create folder templates </li>
+                    </ol>
+         </ol>
+    </p>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp2.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Adding A New App : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>Add To Views : </b> <br><br><br>
+          <li style="color:green;"><b>Views are usually put in a file called views.py located on your app's folder</b></li><br>
+              <ol type="A">
+                <li style="color:green;">Find it</b></li><br>
+                <li style="color:blue;">Replace the content with this</b></li><br>
+              </ol>
+       </ol>
+        
+    </p>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp3.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Adding A New App : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>Add To URLs : </b> <br><br><br>
+          <li style="color:red;"><b>Create a file named urls.py in the same folder as the views.py file</b></li><br><br>
+              <ol type="A">
+                <li style="color:blue;">Insert the code in the image in this file</b></li><br>
+              </ol><br><br><br><br>
+           <li style="color:red;"><b>*The urls.py file here specific for this application.</b></li><br>
+           <li style="color:red;"><b>*We have to do some routing in the root directory for the whole peoject as well.</b></li><br>
+       </ol>
+        
+    </p>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp4.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Adding A New App : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>Add To URLs : </b> <br><br><br>
+            <li style="color:red;"><b>*The urls.py file here specific for this application</b></li><br><br>
+            <li style="color:red;"><b>*We have to do some routing in the root directory for the whole peoject as well.</b></li><br><br><br>
+            <li style="color:green;"><b>There is a file called urls.py in the project folder</b></li><br>
+                  <ol>
+                    <li style="color:green;"><b>open that file</b></li><br>
+                        <ol type="i">
+                          <li style="color:blue;">add the include module in the import statement, next to import path</li><br>
+                          <li style="color:blue;">also add a path() function in the urlpatterns[] list</li><br>
+                              <ol type="a">
+                                <li style="color:blue;">with arguments that <br> will route users that comes in<br> via 127.0.0.1:8000/InsertAppName/</li><br>
+                              </ol>
+                        </ol>
+           </ol>
+                  
+                  
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp5.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Adding A Template to A New App : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>Creating a templates folder : </b> <br><br><br>
+            <li style="color:green;"><b>Create a templates folder inside the members folder</b></li><br>
+                  <ol type="A">
+                    <li style="color:green;"><b>create a HTML file named myfirst.html</b></li><br>
+                    <li style="color:green;"><b>Open the HTML file</b></li><br>
+                    <li style="color:blue;"><b>Insert the code in the image here</b></li><br>
+                  </ol>
+        </ol>
+                  
+                  
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp6.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Adding A Template to A New App : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>Modify the View : </b> <br><br><br>
+            <li style="color:green;"><b>Open the views.py file</b></li><br>
+                  <ol type="A">
+                    <li style="color:blue;"><b>replace the index view with this</b></li><br>
+                  </ol>
+        </ol>
+                  
+                  
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\dtb_imgs\AddingNewApp7.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Adding A Template to A New App : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>Change Settings : </b> <br><br><br>
+            <li style="color:red;"><b>We have to tell Django that a new app is created</b></li><br>
+            <li style="color:green;"><b>This is done in the settings.py file in the Project's folder</b></li><br>
+                  <ol>
+                        <li style="color:green;"><b>Look up the INSTALLED_APPS[] list</b></li><br>
+                            <ol type="i">
+                              <li style="color:blue;">add the members app like the image</li><br>
+                            </ol>
+                        <li style="color:green;"><b>Then run</b></li><br>
+                            <ol type="i">
+                              <li style="color:blue;">python manage.py migrate</li><br>
+                              <li style="color:blue;">python manage.py runserver</li><br>
+                            </ol>
+                    </ol>
+           </ol>
+                  
+                  
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Working On A Django Project : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b>  More Guidelines :</b> <br><br><br>
+          <li><b>You can add to views direction for what to do during the app : </b></li>
+              <ol type="a">
+                <li style="color:green;"> Add to urls --> Call views </li>
+              </ol>
+          <br><br><br>
+          <li style="color:blue;"><b>You can add a templates folder and add html docs inside :  </b></li>
+              <ol type="a">
+                <li style="color:green;"> to connect it to the view add to view</li>
+                    <ol type="i">
+                      <li style="color:red;"> Add to view</li>
+                      <li style="color:red;"> Then add that to url patterns so it can call that method in views  </li>
+                    </ol>
+              </ol>
+          <br><br><br>
+       </ol>
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="clearfix">
+  <div class="img-container_two">
+    <img src=".\images\HTTP_Request1.png" alt="Img1" style="width:100%;height:100%;">
+  </div>
+
+  <div class="column content">
+    <h1 class="two">Making Migrations : </h1>
+    <p class="one">
+    
+        <ol type="I"> <b> To make migrations : </b> <br><br><br>
+            <li><b>Happens after changes, for changes to take effect</b></li>
+                <ol type="a">
+                  <li>Such as :</li>
+                      <ol type="i">
+                        <li>Creating models</li>
+                        <li>Adding to models</li>
+                        <li>Updating models</li>
+                      </ol>
+            <br><br>
+            <li style="color:blue;" > python manage.py makemigrations <b>InsertModelName</b></li>
+                <ol type="i">
+                  <li> <b>** done when adding to models</b></li>
+                </ol>
+                <br><br>
+            <li style="color:blue;" > python manage.py migrate</li>
+                <ol type="i">
+                  <li> <b>** done when adding to templates and models</b></li>
+                </ol>
+          <br><br><br>
+       </ol>
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+
+<div class="center_pag">
+  <div class="pagination">
+  <a href="Django_general2.htm">&laquo;</a>
+  <a href="Django_general.htm">1</a>
+  <a href="Django_general2.htm">2</a>
+  <a href="Django_general3.htm" class="active">3</a>
+  <a href="Django_general4.htm">4</a>
+  <a href="Django_general5.htm">5</a>
+  <a href="Django_general4.htm">&raquo;</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<br><br><br><br><br><br>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+
+</html>
